@@ -1,6 +1,7 @@
 from importlib.resources import files
+import json
 
 
 if __name__ == '__main__':
-    traversable = files("nuitka_compile_traversable_bug")
+    traversable = files("json")
     print(traversable / 'dir')
