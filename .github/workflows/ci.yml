@@ -29,16 +29,19 @@ jobs:
             nuitkaArgs: ""
             exeExtension: ""
             allowedLinkedLibs: ""
+            executableExtension: ".bin"
           - os: macos-11
             name: macOS
             nuitkaArgs: ""
             exeExtension: ""
             allowedLinkedLibs: ""
+            executableExtension: ".bin"
           - os: windows-2019
             name: Windows
             nuitkaArgs: "--mingw64"
             exeExtension: ".exe"
             allowedLinkedLibs: ""
+            executableExtension: ".exe"
 
     steps:
       - uses: actions/checkout@v3
@@ -108,7 +111,7 @@ jobs:
       - name: TestRun
         if: ${{ !cancelled() }}
         run: |
-          ./cicdtools_${{ matrix.name }}/cicdtools${{ matrix.exeExtension }} test-run "${{ env.MAIN_MODULE }}.dist/${{ env.MAIN_MODULE }}${{ matrix.exeExtension }}"
+          ./cicdtools_${{ matrix.name }}/cicdtools${{ matrix.exeExtension }} test-run "${{ env.MAIN_MODULE }}.dist/${{ env.MAIN_MODULE }}${{ matrix.executableExtension }}"
         shell: bash
 
       - uses: actions/upload-artifact@v3
