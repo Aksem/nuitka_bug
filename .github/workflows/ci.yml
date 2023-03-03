@@ -22,7 +22,7 @@ jobs:
       matrix:
         os: [ubuntu-20.04, macos-11, windows-2019]
         python-version: ["3.10"]
-        nuitka-version: ["nuitka==1.4.7", "https://github.com/Nuitka/Nuitka/archive/refs/heads/factory.zip"]
+        nuitka-version: ["nuitka==1.4.8", "https://github.com/Nuitka/Nuitka/archive/refs/heads/factory.zip"]
         include:
           - os: ubuntu-20.04
             name: Linux
@@ -104,6 +104,7 @@ jobs:
             --show-memory \
             --show-modules \
             --trace-execution \
+            --include-package=nuitka_compile_dynamic_import_bug.custom_package \
             ${{ matrix.nuitkaArgs }} \
             ${{ env.PACKAGE_NAME }}/${{ env.MAIN_MODULE }}.py
         shell: bash
