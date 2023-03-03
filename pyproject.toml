@@ -1,14 +1,14 @@
 [tool.poetry]
-name = "nuitka-compile-traversable-bug"
+name = "nuitka-compile-dynamic-import-bug"
 version = "0.1.0"
 description = ""
 authors = ["Vladyslav Hnatiuk <aders1234@gmail.com>"]
 readme = "README.md"
-packages = [{include = "nuitka_compile_traversable_bug"}]
+packages = [{include = "nuitka_compile_dynamic_import_bug"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-Nuitka = "^1.4.7"
+Nuitka = { url = "https://github.com/Nuitka/Nuitka/archive/refs/heads/factory.zip" }
 
 
 [tool.poetry.group.dev.dependencies]

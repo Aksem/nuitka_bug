@@ -10,4 +10,6 @@ poetry run python -m nuitka \
     --warn-implicit-exceptions \
     --show-memory \
     --show-modules \
-    nuitka_compile_traversable_bug/main.py
+    --include-package=nuitka_compile_dynamic_import_bug.custom_package \
+    --include-module=nuitka_compile_dynamic_import_bug.custom_package.mod \
+    nuitka_compile_dynamic_import_bug/main.py

@@ -10,7 +10,7 @@ defaults:
     shell: bash
 
 env:
-  PACKAGE_NAME: nuitka_compile_traversable_bug
+  PACKAGE_NAME: nuitka_compile_dynamic_import_bug
   MAIN_MODULE: main
 
 jobs:
