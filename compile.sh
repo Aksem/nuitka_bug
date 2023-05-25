@@ -11,4 +11,4 @@ poetry run python -m nuitka \
     --show-memory \
     --show-modules \
     --trace-execution \
-    nuitka_compile_dynamic_import_bug/main.py
+    nuitka_async_iterator_bug/main.py
