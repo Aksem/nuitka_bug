@@ -1,18 +1,14 @@
 [tool.poetry]
-name = "nuitka-compile-dynamic-import-bug"
+name = "nuitka-async-iterator-bug"
 version = "0.1.0"
 description = ""
 authors = ["Vladyslav Hnatiuk <aders1234@gmail.com>"]
 readme = "README.md"
-packages = [{include = "nuitka_compile_dynamic_import_bug"}]
+packages = [{include = "nuitka_async_iterator_bug"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-Nuitka = { url = "https://github.com/Nuitka/Nuitka/archive/refs/heads/factory.zip" }
-
-
-[tool.poetry.group.dev.dependencies]
-ordered-set = "^4.1.0"
+Nuitka = "^1.5.8"
 
 [build-system]
 requires = ["poetry-core"]

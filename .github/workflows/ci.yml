@@ -10,7 +10,7 @@ defaults:
     shell: bash
 
 env:
-  PACKAGE_NAME: nuitka_compile_dynamic_import_bug
+  PACKAGE_NAME: nuitka_async_iterator_bug
   MAIN_MODULE: main
 
 jobs:
@@ -60,7 +60,7 @@ jobs:
           key: ${{ runner.os }}-nuitka
 
       - name: Install poetry
-        run: pipx install poetry==1.3.1
+        run: pipx install poetry==1.5.0
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
@@ -104,7 +104,6 @@ jobs:
             --show-memory \
             --show-modules \
             --trace-execution \
-            --include-package=nuitka_compile_dynamic_import_bug.custom_package \
             ${{ matrix.nuitkaArgs }} \
             ${{ env.PACKAGE_NAME }}/${{ env.MAIN_MODULE }}.py
         shell: bash
