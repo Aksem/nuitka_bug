@@ -11,11 +11,10 @@ async def iterator():
 
 async def iterate_changes() -> None:
     print(f"Start")
-    # try:
     async for changes in iterator():
         print(f"Iteration: {changes}")
         print('before')
-        delete_group_items_changes = set(
+        filtered_items = set(
             [
                 change
                 for change in changes
@@ -26,8 +25,6 @@ async def iterate_changes() -> None:
             ]
         )
         print('after')
-    # except Exception as e:
-    #     print(e)
 
 
 if __name__ == '__main__':
