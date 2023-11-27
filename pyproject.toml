@@ -1,14 +1,15 @@
 [tool.poetry]
-name = "nuitka-async-iterator-bug"
+name = "nuitka-bug"
 version = "0.1.0"
 description = ""
 authors = ["Vladyslav Hnatiuk <aders1234@gmail.com>"]
 readme = "README.md"
-packages = [{include = "nuitka_async_iterator_bug"}]
+packages = [{include = "nuitka_bug"}]
 
 [tool.poetry.dependencies]
-python = "^3.10"
-Nuitka = "^1.5.8"
+python = "^3.11"
+Nuitka = "^1.9"
+aiohttp = {version = "^3.9.1", extras = ["speedup"]}
 
 [build-system]
 requires = ["poetry-core"]

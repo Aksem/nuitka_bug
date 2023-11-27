@@ -10,7 +10,7 @@ defaults:
     shell: bash
 
 env:
-  PACKAGE_NAME: nuitka_async_iterator_bug
+  PACKAGE_NAME: nuitka_bug
   MAIN_MODULE: main
 
 jobs:
@@ -21,8 +21,8 @@ jobs:
       max-parallel: 1
       matrix:
         os: [ubuntu-20.04, macos-11, windows-2019]
-        python-version: ["3.10"]
-        nuitka-version: ["nuitka==1.5.8", "https://github.com/Nuitka/Nuitka/archive/refs/heads/factory.zip"]
+        python-version: ["3.11"]
+        nuitka-version: ["nuitka==1.9.2", "https://github.com/Nuitka/Nuitka/archive/refs/heads/factory.zip"]
         include:
           - os: ubuntu-20.04
             name: Linux
