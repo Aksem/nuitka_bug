@@ -7,9 +7,9 @@ readme = "README.md"
 packages = [{include = "nuitka_bug"}]
 
 [tool.poetry.dependencies]
-python = "^3.11"
-Nuitka = "^1.9"
-aiohttp = {version = "^3.9.1", extras = ["speedup"]}
+python = "^3.12"
+Nuitka = "2.3.10"
+black = "^24.4.2"
 
 [build-system]
 requires = ["poetry-core"]
