@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "nuitka_bug"}]
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.11"
 Nuitka = "2.3.10"
 libcst = "^1.4.0"
 
