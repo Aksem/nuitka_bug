@@ -20,8 +20,8 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-22.04, macos-13, windows-2022]
-        python-version: ["3.11"]
-        nuitka-version: ["nuitka==2.3.10", "nuitka==2.1.6", "https://github.com/Nuitka/Nuitka/archive/refs/heads/factory.zip"]
+        python-version: ["3.11", "3.12"]
+        nuitka-version: ["nuitka==2.3.10", "https://github.com/Nuitka/Nuitka/archive/refs/heads/factory.zip"] # , "nuitka==2.1.6",
         include:
           - os: ubuntu-22.04
             name: Linux
