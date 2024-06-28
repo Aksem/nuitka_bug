@@ -19,23 +19,23 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-20.04, macos-12, windows-2019]
+        os: [ubuntu-22.04, macos-13, windows-2022]
         python-version: ["3.11"]
         nuitka-version: ["nuitka==2.3.10", "nuitka==2.1.6", "https://github.com/Nuitka/Nuitka/archive/refs/heads/factory.zip"]
         include:
-          - os: ubuntu-20.04
+          - os: ubuntu-22.04
             name: Linux
             nuitkaArgs: ""
             exeExtension: ""
             allowedLinkedLibs: ""
             executableExtension: ".bin"
-          - os: macos-11
+          - os: macos-13
             name: macOS
             nuitkaArgs: ""
             exeExtension: ""
             allowedLinkedLibs: ""
             executableExtension: ".bin"
-          - os: windows-2019
+          - os: windows-2022
             name: Windows
             nuitkaArgs: "--mingw64"
             exeExtension: ".exe"
