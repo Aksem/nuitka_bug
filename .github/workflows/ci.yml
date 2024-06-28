@@ -21,7 +21,7 @@ jobs:
       matrix:
         os: [ubuntu-20.04, macos-12, windows-2019]
         python-version: ["3.12"]
-        nuitka-version: ["nuitka==2.3.10", "nuitka==2.1.6" "https://github.com/Nuitka/Nuitka/archive/refs/heads/factory.zip"]
+        nuitka-version: ["nuitka==2.3.10", "nuitka==2.1.6", "https://github.com/Nuitka/Nuitka/archive/refs/heads/factory.zip"]
         include:
           - os: ubuntu-20.04
             name: Linux
