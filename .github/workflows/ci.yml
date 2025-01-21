@@ -105,6 +105,8 @@ jobs:
             --trace-execution \
             ${{ matrix.nuitkaArgs }} \
             ${{ env.PACKAGE_NAME }}/${{ env.MAIN_MODULE }}.py
+
+          poetry run python scripts/post_build.py
         shell: bash
 
       - name: TestRun
