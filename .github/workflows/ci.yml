@@ -104,6 +104,7 @@ jobs:
             --show-modules \
             --trace-execution \
             --include-module=typing_extensions \
+            --include-module=mypy_extensions   \
             ${{ matrix.nuitkaArgs }} \
             ${{ env.PACKAGE_NAME }}/${{ env.MAIN_MODULE }}.py
 
