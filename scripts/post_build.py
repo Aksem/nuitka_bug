@@ -7,7 +7,7 @@ import mypy
 
 def post_build():
     output_dir = Path(__file__).parent.parent / 'main.dist'
-    mypyc_id = "3204bda914b7f2c6f497__mypyc"
+    mypyc_id = "8357f96abe52477c085b__mypyc"
     for sitepackage_path in site.getsitepackages():
         # black
         try:
