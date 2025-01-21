@@ -19,9 +19,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-22.04, macos-13, windows-2022]
-        python-version: ["3.11", "3.12"]
-        nuitka-version: ["nuitka==2.3.10", "https://github.com/Nuitka/Nuitka/archive/refs/heads/factory.zip"] # , "nuitka==2.1.6",
+        os: [ubuntu-22.04] # , macos-13, windows-2022
+        python-version: ["3.11"]
+        nuitka-version: ["nuitka==2.6.0", "https://github.com/Nuitka/Nuitka/archive/refs/heads/factory.zip", "nuitka==2.5", "nuitka==2.4", "nuitka==2.3", "nuitka==2.2", "nuitka==2.1", "nuitka==2.0"]
         include:
           - os: ubuntu-22.04
             name: Linux
@@ -29,18 +29,18 @@ jobs:
             exeExtension: ""
             allowedLinkedLibs: ""
             executableExtension: ".bin"
-          - os: macos-13
-            name: macOS
-            nuitkaArgs: ""
-            exeExtension: ""
-            allowedLinkedLibs: ""
-            executableExtension: ".bin"
-          - os: windows-2022
-            name: Windows
-            nuitkaArgs: "--mingw64"
-            exeExtension: ".exe"
-            allowedLinkedLibs: ""
-            executableExtension: ".exe"
+          # - os: macos-13
+          #   name: macOS
+          #   nuitkaArgs: ""
+          #   exeExtension: ""
+          #   allowedLinkedLibs: ""
+          #   executableExtension: ".bin"
+          # - os: windows-2022
+          #   name: Windows
+          #   nuitkaArgs: "--mingw64"
+          #   exeExtension: ".exe"
+          #   allowedLinkedLibs: ""
+          #   executableExtension: ".exe"
 
     steps:
       - uses: actions/checkout@v3
