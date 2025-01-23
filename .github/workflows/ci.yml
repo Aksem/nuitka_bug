@@ -108,8 +108,6 @@ jobs:
             --include-module="3204bda914b7f2c6f497__mypyc" \
             ${{ matrix.nuitkaArgs }} \
             ${{ env.PACKAGE_NAME }}/${{ env.MAIN_MODULE }}.py
-
-          poetry run python scripts/post_build.py
         shell: bash
 
       - name: TestRun
