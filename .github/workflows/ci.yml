@@ -115,10 +115,10 @@ jobs:
           ./cicdtools_${{ matrix.name }}/cicdtools${{ matrix.exeExtension }} test-run "${{ env.MAIN_MODULE }}.dist/${{ env.MAIN_MODULE }}${{ matrix.executableExtension }}"
         shell: bash
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
-          name: ${{ env.MAIN_MODULE }}_${{ matrix.name }}
+          name: ${{ env.MAIN_MODULE }}_${{ matrix.name }}_${{ matrix.nuitka-version }}
           path: |
             ${{ github.workspace }}/${{ env.MAIN_MODULE }}.dist
 
