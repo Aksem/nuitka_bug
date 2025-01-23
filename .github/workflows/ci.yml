@@ -93,7 +93,6 @@ jobs:
           export NUITKA_CACHE_DIR=$PWD/.nuitka_cache
           export CCACHE_DIR=$PWD/.ccache
 
-          poetry run mypyc nuitka_bug/subpackage/comp_lib.py nuitka_bug/subpackage/__init__.py
           poetry run python -m nuitka \
             --standalone \
             --follow-imports \
