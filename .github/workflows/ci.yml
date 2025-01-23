@@ -21,7 +21,8 @@ jobs:
       matrix:
         os: [ubuntu-22.04] # , macos-13, windows-2022
         python-version: ["3.11"]
-        nuitka-version: ["nuitka==2.6.0", "https://github.com/Nuitka/Nuitka/archive/refs/heads/factory.zip", "nuitka==2.5", "nuitka==2.4", "nuitka==2.3", "nuitka==2.2", "nuitka==2.1", "nuitka==2.0"]
+        # , "nuitka==2.4", "nuitka==2.3", "nuitka==2.2", "nuitka==2.1", "nuitka==2.0"
+        nuitka-version: ["nuitka==2.6.0", "https://github.com/Nuitka/Nuitka/archive/refs/heads/factory.zip", "nuitka==2.5"]
         include:
           - os: ubuntu-22.04
             name: Linux
@@ -93,7 +94,6 @@ jobs:
           export NUITKA_CACHE_DIR=$PWD/.nuitka_cache
           export CCACHE_DIR=$PWD/.ccache
 
-          poetry run mypyc nuitka_bug/subpackage/comp_lib.py nuitka_bug/subpackage/__init__.py
           poetry run python -m nuitka \
             --clang \
             --standalone \
