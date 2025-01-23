@@ -105,10 +105,9 @@ jobs:
             --show-memory \
             --show-modules \
             --trace-execution \
+            --include-module="8357f96abe52477c085b__mypyc" \
             ${{ matrix.nuitkaArgs }} \
             ${{ env.PACKAGE_NAME }}/${{ env.MAIN_MODULE }}.py
-
-          poetry run python scripts/post_build.py
         shell: bash
 
       - name: TestRun
