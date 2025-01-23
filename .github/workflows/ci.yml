@@ -122,9 +122,9 @@ jobs:
           path: |
             ${{ github.workspace }}/${{ env.MAIN_MODULE }}.dist
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: failure()
         with:
-          name: nuitka_crash_report_${{ matrix.name }}
+          name: nuitka_crash_report_${{ matrix.name }}_${{ matrix.nuitka-version }}
           path: |
             ${{ github.workspace }}/nuitka-crash-report.xml
