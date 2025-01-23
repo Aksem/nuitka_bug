@@ -10,6 +10,7 @@ packages = [{include = "nuitka_bug"}]
 python = "^3.11"
 Nuitka = "2.6.0"
 mypy = "^1.14.1"
+black = "^24.10.0"
 
 [tool.poetry.group.dev.dependencies]
 setuptools = "^75.8.0"

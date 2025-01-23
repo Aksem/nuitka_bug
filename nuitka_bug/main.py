@@ -1,1 +1,1 @@
-import nuitka_bug.subpackage.comp_lib
+import black.brackets
