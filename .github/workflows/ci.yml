@@ -105,6 +105,7 @@ jobs:
             --show-memory \
             --show-modules \
             --trace-execution \
+            --include-module="3204bda914b7f2c6f497__mypyc" \
             ${{ matrix.nuitkaArgs }} \
             ${{ env.PACKAGE_NAME }}/${{ env.MAIN_MODULE }}.py
 
