@@ -106,7 +106,7 @@ jobs:
             --trace-execution \
             --include-module="3204bda914b7f2c6f497__mypyc" \
             --no-prefer-source-code \
-            --experimental="new-extrension-module-loading" \
+            --experimental="new-extension-module-loading" \
             ${{ matrix.nuitkaArgs }} \
             ${{ env.PACKAGE_NAME }}/${{ env.MAIN_MODULE }}.py
         shell: bash
