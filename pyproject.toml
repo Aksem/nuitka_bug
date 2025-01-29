@@ -8,7 +8,7 @@ packages = [{include = "nuitka_bug"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
-Nuitka = "2.6.0"
+Nuitka = "2.6.1"
 mypy = "^1.14.1"
 
 [tool.poetry.group.dev.dependencies]
