@@ -1,1 +1,1 @@
-import mypy
+import mypy.build
